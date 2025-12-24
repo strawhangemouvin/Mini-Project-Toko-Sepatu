@@ -11,7 +11,7 @@ namespace toko_sepatu
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new Signin());
+            Application.Run(new Loading());
         }
     }
 }
