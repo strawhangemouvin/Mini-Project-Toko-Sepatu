@@ -126,7 +126,6 @@
             // 
             this.picture_box_merem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picture_box_merem.BackColor = System.Drawing.Color.White;
-            //this.picture_box_merem.Image = global::toko_sepatu.Properties.Resources.icons8_eye_50__2_;
             this.picture_box_merem.ImageRotate = 0F;
             this.picture_box_merem.Location = new System.Drawing.Point(722, 220);
             this.picture_box_merem.Name = "picture_box_merem";
@@ -140,7 +139,6 @@
             // 
             this.picture_box_melek.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.picture_box_melek.BackColor = System.Drawing.Color.White;
-            //this.picture_box_melek.Image = global::toko_sepatu.Properties.Resources.icons8_eye_50;
             this.picture_box_melek.ImageRotate = 0F;
             this.picture_box_melek.Location = new System.Drawing.Point(721, 223);
             this.picture_box_melek.Name = "picture_box_melek";
@@ -154,7 +152,7 @@
             // 
             this.picture_box_signin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            //this.picture_box_signin.Image = global::toko_sepatu.Properties.Resources.fix_slide;
+            this.picture_box_signin.Image = global::toko_sepatu.Properties.Resources.fix_slide;
             this.picture_box_signin.Location = new System.Drawing.Point(0, -17);
             this.picture_box_signin.Name = "picture_box_signin";
             this.picture_box_signin.Size = new System.Drawing.Size(418, 511);
@@ -177,7 +175,7 @@
             this.txt_pass_signin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_pass_signin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_pass_signin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            //this.txt_pass_signin.IconLeft = global::toko_sepatu.Properties.Resources.icons8_padlock_50;
+            this.txt_pass_signin.IconLeft = global::toko_sepatu.Properties.Resources.icons8_padlock_50;
             this.txt_pass_signin.IconLeftSize = new System.Drawing.Size(25, 25);
             this.txt_pass_signin.Location = new System.Drawing.Point(492, 216);
             this.txt_pass_signin.Name = "txt_pass_signin";
@@ -203,7 +201,7 @@
             this.txt_user_signin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_user_signin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_user_signin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            //this.txt_user_signin.IconLeft = global::toko_sepatu.Properties.Resources.icons8_account_321;
+            this.txt_user_signin.IconLeft = global::toko_sepatu.Properties.Resources.icons8_account_32;
             this.txt_user_signin.IconLeftSize = new System.Drawing.Size(25, 25);
             this.txt_user_signin.IconRightSize = new System.Drawing.Size(15, 15);
             this.txt_user_signin.Location = new System.Drawing.Point(492, 157);
