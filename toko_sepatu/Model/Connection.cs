@@ -14,7 +14,7 @@ namespace toko_sepatu.Model
         public MySqlConnection GetConn()
         {
             MySqlConnection conn = new MySqlConnection();
-            conn.ConnectionString = "server=localhost;user=root;database=toko_sepatu_db;password=";
+            conn.ConnectionString = "server=localhost;user=root;database=moonikers_system;;password=";
 
             try
             {

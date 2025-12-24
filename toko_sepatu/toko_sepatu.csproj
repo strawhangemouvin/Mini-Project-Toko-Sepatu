@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -45,14 +48,18 @@
     <Reference Include="MySqlConnector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
       <HintPath>..\packages\MySqlConnector.2.5.0\lib\net471\MySqlConnector.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
+    <Reference Include="System.Management" />
     <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
     </Reference>
@@ -67,6 +74,8 @@
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -76,59 +85,178 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\AdminController.cs" />
-    <Compile Include="Controller\SepatuController.cs" />
+    <Compile Include="Controller\DetailController.cs" />
+    <Compile Include="Controller\DetailSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\DetailSales.Designer.cs">
+      <DependentUpon>DetailSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\MoonikersController.cs" />
     <Compile Include="Controller\ValidationController.cs" />
     <Compile Include="Model\Connection.cs" />
-    <Compile Include="View\Add.cs">
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Add.Designer.cs">
-      <DependentUpon>Add.cs</DependentUpon>
+    <Compile Include="View\AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\LoginAdmin.cs">
+    <Compile Include="View\AddMerk.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\LoginAdmin.Designer.cs">
-      <DependentUpon>LoginAdmin.cs</DependentUpon>
+    <Compile Include="View\AddMerk.Designer.cs">
+      <DependentUpon>AddMerk.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Update.cs">
+    <Compile Include="View\AddSales.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Update.Designer.cs">
-      <DependentUpon>Update.cs</DependentUpon>
+    <Compile Include="View\AddSales.Designer.cs">
+      <DependentUpon>AddSales.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\view.cs">
+    <Compile Include="View\Merk.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\view.Designer.cs">
-      <DependentUpon>view.cs</DependentUpon>
+    <Compile Include="View\Merk.Designer.cs">
+      <DependentUpon>Merk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddProduct.Designer.cs">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DashboardAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DashboardAdmin.Designer.cs">
+      <DependentUpon>DashboardAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DashboardKasir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DashboardKasir.Designer.cs">
+      <DependentUpon>DashboardKasir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Sales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Sales.Designer.cs">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Signin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Signin.Designer.cs">
+      <DependentUpon>Signin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Signup.Designer.cs">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UpdateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UpdateCustomer.Designer.cs">
+      <DependentUpon>UpdateCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UpdateMerk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UpdateMerk.Designer.cs">
+      <DependentUpon>UpdateMerk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UpdateProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UpdateProduct.Designer.cs">
+      <DependentUpon>UpdateProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Product.Designer.cs">
+      <DependentUpon>Product.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="View\Add.resx">
-      <DependentUpon>Add.cs</DependentUpon>
+    <EmbeddedResource Include="Controller\DetailSales.resx">
+      <DependentUpon>DetailSales.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\LoginAdmin.resx">
-      <DependentUpon>LoginAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="View\AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Update.resx">
-      <DependentUpon>Update.cs</DependentUpon>
+    <EmbeddedResource Include="View\AddMerk.resx">
+      <DependentUpon>AddMerk.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\view.resx">
-      <DependentUpon>view.cs</DependentUpon>
+    <EmbeddedResource Include="View\AddSales.resx">
+      <DependentUpon>AddSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Merk.resx">
+      <DependentUpon>Merk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddProduct.resx">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DashboardAdmin.resx">
+      <DependentUpon>DashboardAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DashboardKasir.resx">
+      <DependentUpon>DashboardKasir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Sales.resx">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Signin.resx">
+      <DependentUpon>Signin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Signup.resx">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UpdateCustomer.resx">
+      <DependentUpon>UpdateCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UpdateMerk.resx">
+      <DependentUpon>UpdateMerk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UpdateProduct.resx">
+      <DependentUpon>UpdateProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Product.resx">
+      <DependentUpon>Product.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -143,6 +271,97 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resource\icons8-history-50.png" />
+    <None Include="Resource\icons8-pay-50.png" />
+    <None Include="Resource\icons8-customer-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\icons8-add-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\icons8-sneakers-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-account-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-padlock-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-account-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-account-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiks_slide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiks_slide1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fix_slide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sneakers-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-back-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eye-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eye-50 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-back-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-back-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-back-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-back-32 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sales-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sales-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-category-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sneakers-68.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-product-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gemini_Generated_Image_n9sh7wn9sh7wn9sh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\interior monikers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-50.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

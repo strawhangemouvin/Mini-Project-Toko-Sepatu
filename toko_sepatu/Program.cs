@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using toko_sepatu.View; // <--- WAJIB DITAMBAH BIAR KENAL SAMA FOLDER VIEW
-
+using toko_sepatu.View; 
 namespace toko_sepatu
 {
     internal static class Program
@@ -12,7 +11,7 @@ namespace toko_sepatu
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new LoginAdmin());
+            Application.Run(new Signin());
         }
     }
 }
